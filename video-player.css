@@ -48,3 +48,63 @@ border-radius:50px;
     cursor: pointer;
     text-align:center;
 }
+.forward-btn{
+    border-radius: 50px;
+    height: 19px;
+    top: 20px;
+    left: 50px;
+    background-color: aliceblue;
+    width: 19px;
+    margin-left: 13em;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.backward-btn{
+    border-radius: 50px;
+    height: 19px;
+    top: 20px;
+    left: -46px;
+    background-color: aliceblue;
+    width: 19px;
+    margin-left: 13em;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+}
+.btn-full-screen{
+    border-radius: 50px;
+    height: 19px;
+    top: 20px;
+    right: 4px;
+    background-color: aliceblue;
+    width: 19px;
+    margin-left: 13em;
+    position: absolute;
+    cursor: pointer;
+    text-align: center
+
+}
+.valume-btn{
+    border-radius: 50px;
+    height: 19px;
+    top: 20px;
+    right: 27px;
+    background-color: aliceblue;
+    width: 19px;
+    margin-left: 13em;
+    position: absolute;
+    cursor: pointer;
+    text-align: center
+
+}
+
+.volume-show-container{
+    top: 25px;
+    right: 56px;
+    margin-left: 13em;
+    position: absolute;
+    font-size: 9px;
+    color: white
+}
