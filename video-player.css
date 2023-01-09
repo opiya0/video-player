@@ -22,9 +22,10 @@ body{
     background-color: rgb(45 32 16);
     height: 49px;
     width: 100%;
-    opacity: 50%;
+    opacity: 0%;
     top: 205px;
     position: absolute;
+    
 }
 .btn-stop{
     border-radius:50px;
