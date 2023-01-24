@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>video-player</title>
 <link rel="stylesheet" href="video-player.css">
+<script defer src="video-player.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 <div class="container">
-    <div class="video-container">
-    <video src="siu.mp4"></video>
+    <div class="video-container" id="video">
+    <video src="siu.mp4" id="video2"></video>
 </div>
 <div class="progress-container">
     <div class="progress"> 
@@ -18,33 +21,35 @@
 
     </div>
 </div>
-<div class="control-main">
+<div class="control-main" id="control" >
     <div class="btn-stop">
-        <i class=""></i>
+        <ion-icon name="stop" class="stop"></ion-icon>
 
     </div>
-    <div class="btn-play">
-        <i class=""></i>
+    <div class="btn-play" onclick="playvideo()">
+        <ion-icon name="play" class="play"></ion-icon>
 
     </div>
     <div class="btn forward-btn">
-        <i class=""></i>
+        <ion-icon name="play-forward" class="playforwardback"></ion-icon>
 
     </div>
     <div class="btn backward-btn">
-        <i class=""></i>
+        <ion-icon name="play-back" class="playforwardback"></ion-icon>
 
     </div>
     <div class="btn btn-full-screen">
-        <i class=""></i>
+        <ion-icon name="scan" class="screen"></ion-icon>
+
 
     </div>
     <div class="btn valume-btn">
-        <i class=""></i>
+        <ion-icon name="volume-high" class="volume"></ion-icon>
+
 
     </div>
     <div class="volume-show-container">
-        <i class=""></i>
+        <i class="">100%</i>
 
     </div>
 </div>
