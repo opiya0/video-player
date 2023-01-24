@@ -25,6 +25,7 @@ body{
     opacity: 0%;
     top: 205px;
     position: absolute;
+    transition: 1s;
     
 }
 .btn-stop{
@@ -108,4 +109,29 @@ border-radius:50px;
     position: absolute;
     font-size: 9px;
     color: white
+}
+.play{
+    height: 20px;
+    width: 33px;
+    padding-top: 5px;
+}
+.playforwardback{
+    height: 13px;
+    width: 21px;
+    padding-top: 3px
+}
+.stop{
+    height: 20px;
+    width: 33px;
+    padding-top: 5px; 
+}
+.screen{
+    height: 13px;
+    width: 20px;
+    padding-top: 3px;
+}
+.volume{
+    height: 13px;
+    width: 21px;
+    padding-top: 3px 
 }
