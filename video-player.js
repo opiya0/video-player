@@ -16,5 +16,27 @@ control.addEventListener("mouseleave",function(){
     }
     
     }
+
+
+
+    function movevideo(n){
+     video2.currentTime+=(n*1);
+    }
+
+     
+document.onkeydown=function(e){
+    switch(e.key){
+        case "ArrowUp":
+     if(video2.volume <1){
+        video2.volume=(video2.volume+0.2).toFixed(1);//ta 1 ragm ashar neshon mide
+     }
+     case "ArrowDown":
+        if(video2.volume >0){
+            video2.volume=(video2.volume-0.2).toFixed(1);//ta 1 ragm ashar neshon mide
+        }
+    }
+
+
+}
     
     
