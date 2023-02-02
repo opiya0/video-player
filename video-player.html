@@ -23,7 +23,7 @@
 </div>
 <div class="control-main" id="control" >
     <div class="btn-stop">
-        <ion-icon name="stop" class="stop"></ion-icon>
+        <ion-icon name="stop" class="stop" onclick="stopvideo()"></ion-icon>
 
     </div>
     <div class="btn-play" onclick="playvideo()">
@@ -38,18 +38,18 @@
         <ion-icon name="play-back" class="playforwardback"></ion-icon>
 
     </div>
-    <div class="btn btn-full-screen">
+    <div class="btn btn-full-screen" onclick="fullscreen()">
         <ion-icon name="scan" class="screen"></ion-icon>
 
 
     </div>
-    <div class="btn valume-btn" onclick="volume()">
+    <div class="btn valume-btn" onclick="muted()">
         <ion-icon name="volume-high" class="volume"></ion-icon>
 
 
     </div>
     <div class="volume-show-container">
-        <i class="">100%</i>
+        <i class="" id="text">100%</i>
 
     </div>
 </div>
