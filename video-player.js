@@ -1,81 +1,60 @@
-let video=document.getElementById("video")
-let control=document.getElementById("control")
-let video2=document.getElementById("video2")
-let text=document.getElementById("text")
-control.addEventListener("mousemove",function(){
-control.style.opacity="65%";
-})
-control.addEventListener("mouseleave",function(){
-    control.style.opacity="0%";
-    })
-    function playvideo(){
-    if(video2.paused){
-        video2.play();
+var slide=document.getElementsByClassName("slide");
+var dot=document.getElementsByClassName("dot");
+var next=document.querySelector(".next");
+var prev=document.querySelector(".prev");
+var n=0;
+var i;
+
+function disno(){
+for(i=0; i<slide.length ;i++) {
+    slide[i].style.display="none";
+}
+}
+function noactive(){
+    for(i=0;i<dot.length;i++){
+        dot[i].classList.remove("active");
     }
-    else{
-        video2.pause();
-    }
-    
-    }
-
-
-
-    function movevideo(n){
-     video2.currentTime+=(n*1);
-    }
-
-     
-document.onkeydown=function(e){
-    switch(e.key){
-        case "ArrowUp":
-     if(video2.volume <1){
-        video2.volume=(video2.volume+0.2).toFixed(1);//ta 1 ragm ashar neshon mide
-        text.innerHTML=video2.volume*100+"%";
-     }
-     break;
-     case "ArrowDown":
-        if(video2.volume >0){
-            video2.volume=(video2.volume-0.2).toFixed(1);//ta 1 ragm ashar neshon mide
-            text.innerHTML=video2.volume*100+"%";
-        }
-        break;
-
-        case"ArrowRight":
-        movevideo(1);
-
-        break;
-
-        case"ArrowLeft":
-        movevideo(-1);
-        break;
-        case"Enter":
-        fullscreen();
-    }
-
-
 }
 
-function fullscreen(){
-    if(video2.requestFullscreen){
-        video2.requestFullscreen();
-    }
-    if(document.exitFullscreen){
-        document.exitFullscreen();
-    }
-}  
 
-function stopvideo(){
-    video2.currentTime=0;
-  }  
-  function muted(){
-    if(video2.volume===0){
-        video2.volume=1;
-        text.innerHTML=video2.volume*100+"%";
+next.addEventListener("click",function(e){
+    e.preventDefault();
+    n++;
+    if(n>slide.length-1){
+        n=0;
     }
-    else{
-        video2.volume=0;
-        text.innerHTML=video2.volume*100+"%";
-    }
+    disno();
+    noactive();
+    slide[n].style.display="block";
+    dot[n].classList.add("active");
 
-  }
-    
+
+})
+
+
+prev.addEventListener("click",function(e){
+    e.preventDefault();
+    n--;
+    if(n<0){
+        n=slide.length-1;
+    }
+    disno();
+    noactive();
+    slide[n].style.display="block";
+    dot[n].classList.add("active");
+
+
+})
+setInterval(function(){
+    n++;
+    if(n>slide.length-1){
+        n=0;
+    }
+    disno();
+    noactive();
+    slide[n].style.display="block";
+    dot[n].classList.add("active");
+
+
+
+},3000)
